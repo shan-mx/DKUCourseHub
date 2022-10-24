@@ -11,10 +11,10 @@ def CourseShown(data):
     html += getcss('style')
 
     coursename=list(data.keys())
-    section = list(data.values().keys())
+    value_dict = list(data.values())
     print(coursename)
         
-    html +=renderHtml(template_html="table",ClassName=coursename)
+    html +=renderHtml(template_html="table",ClassName=coursename,value_dict=value_dict)
     print(html)
     components.html(
         """
