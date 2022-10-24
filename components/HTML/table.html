@@ -3,7 +3,7 @@
     <div class="classname">
       <h2>{{ClassName[i]}}</h2>
     </div>
-    {% for section in list(value_dict[i].keys()) %}
+    {% for section,value in value_dict[i].items() %}
     <table class="table">
       <thead>
         <tr class="table-active">
@@ -18,13 +18,13 @@
         </tr>
       </thead>
       <tbody>
-        <td>Class</td>
-        <td>{{section}}</td>
-        <td>MoTuWeTh 11:45 - 13:00</td>
-        <td>INNO_Flexible Classroom 1045</td>
-        <td>Joohyun Lee</td>
-        <td>2022/08/22 - 2022/10/13</td>
-        <td>Xxx</td>
+        <td>{{value['number']}}</td>
+        <td>{{section}}{{value['section']}}</td>
+        <td>{{value['time']}}</td>
+        <td>{{value['room']}}</td>
+        <td>{{value['instr']}}</td>
+        <td>{{value['date']}}</td>
+        <td>Open</td>
       </tbody>
     </table>
     {% end %}
