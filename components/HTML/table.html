@@ -19,11 +19,11 @@
       </thead>
       <tbody>
         <td>{{value['number']}}</td>
-        <td>{{section}}{{value['section']}}</td>
-        <td>{{value['time']}}</td>
-        <td>{{value['room']}}</td>
-        <td>{{value['instr']}}</td>
-        <td>{{value['date']}}</td>
+        <td>{{section}} {{value['section']}}</td>
+        <td>{{' '.join(value['time'])}}</td>
+        <td>{{' '.join(value['room'])}}</td>
+        <td>{{' '.join(value['instr'])}}</td>
+        <td>{{' '.join(value['date'])}}</td>
         <td>Open</td>
       </tbody>
     </table>
